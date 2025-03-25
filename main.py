@@ -7,6 +7,9 @@ escolha_computador = random.choice(list(opcoes.values()))
 
 escolha_jogador = input("[1] Pedra \n [2] Papel \n [3] Tesoura \n Qual opção você escolhe? \n")
 
+if escolha_jogador != opcoes:
+    print("Escolha uma opção válida.")
+
 if escolha_jogador == opcao_pedra and escolha_computador == "Pedra":
     print("Sua escolha: Pedra \n" + "Escolha_do_computador" + escolha_computador + "\nResultado: Empate!")
 
