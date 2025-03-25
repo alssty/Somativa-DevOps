@@ -15,11 +15,14 @@ if escolha_jogador not in opcoes:
 else:
     escolha_jogador = opcoes[escolha_jogador]
 
+    print("\nSua escolha: ", escolha_jogador)
+    print("Escolha do computador: ", escolha_computador)
+
     if escolha_jogador == escolha_computador:
-        print("Resultado: Empate!")
+        print("\nResultado: Empate!")
 
     elif vencedor[escolha_jogador] == escolha_computador:
-        print("Resultado: Você ganhou!")
+        print("\nResultado: Você ganhou!")
 
     else:
-        print("Resultado : Você perdeu!")
+        print("\nResultado : Você perdeu!")
