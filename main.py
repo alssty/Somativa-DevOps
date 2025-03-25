@@ -3,38 +3,23 @@
 import random
 
 opcoes = {"1" : "Pedra", "2" : "Papel", "3" : "Tesoura"}
+vencedor = {"Pedra" : "Tesoura", "Papel" : "Pedra", "Tesoura" : "Papel"}
+
 escolha_computador = random.choice(list(opcoes.values()))
 
-escolha_jogador = input("[1] Pedra \n [2] Papel \n [3] Tesoura \n Qual opção você escolhe? \n")
+escolha_jogador = input("[1] Pedra \n[2] Papel \n[3] Tesoura \nQual opção você escolhe? \nResposta: ")
 
-if escolha_jogador != opcoes:
+if escolha_jogador not in opcoes:
     print("Escolha uma opção válida.")
 
-if escolha_jogador == opcao_pedra and escolha_computador == "Pedra":
-    print("Sua escolha: Pedra \n" + "Escolha_do_computador" + escolha_computador + "\nResultado: Empate!")
+else:
+    escolha_jogador = opcoes[escolha_jogador]
 
-if escolha_jogador == opcao_pedra and escolha_computador == "Papel":
-    print("Sua escolha: Pedra \n" + "Escolha do computador: " + escolha_computador + "\nResultado: Você perdeu!")
+    if escolha_jogador == escolha_computador:
+        print("Resultado: Empate!")
 
-if escolha_jogador == opcao_pedra and escolha_computador == "Tesoura":
-    print("Sua escolha: Pedra \n" + "Escolha do computador: " + escolha_computador + "\nResultado: Você ganhou!")
+    elif vencedor[escolha_jogador] == escolha_computador:
+        print("Resultado: Você ganhou!")
 
-
-if escolha_jogador == opcao_papel and escolha_computador == "Pedra":
-    print("Sua escolha: Papel \n" + "Escolha do computador: " + escolha_computador + "\nResultado: Você ganhou!")
-
-if escolha_jogador == opcao_papel and escolha_computador == "Papel":
-    print("Sua escolha: Papel \n" + "Escolha do computador: " + escolha_computador + "\nResultado: Empate!")
-
-if escolha_jogador == opcao_papel and escolha_computador == "Tesoura":
-    print("Sua escolha: Papel \n" + "Escolha do computador: " + escolha_computador + "\nResultado: Você perdeu!")
-
-
-if escolha_jogador == opcao_tesoura and escolha_computador == "Pedra":
-    print("Sua escolha: Tesoura \n" + "Escolha do computador: " + escolha_computador + "\nResultado:  Você perdeu!")
-
-if escolha_jogador == opcao_tesoura and escolha_computador == "Papel":
-    print("Sua escolha: Tesoura \n" + "Escolha do computador: " + escolha_computador + "\nResultado:  Você ganhou!")
-
-if escolha_jogador == opcao_tesoura and escolha_computador == "Tesoura":
-    print("Sua escolha: Tesoura \n" + "Escolha do computador: " + escolha_computador + "\nResultado:  Empate!")
+    else:
+        print("Resultado : Você perdeu!")
