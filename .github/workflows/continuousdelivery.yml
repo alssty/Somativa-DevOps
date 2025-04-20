@@ -1,7 +1,12 @@
+#apenas simulando
+
 name: Continuous Delivery Teste
 
 on:
   push:
+    branches:
+      - main
+  pull_request:
     branches:
       - main
 
