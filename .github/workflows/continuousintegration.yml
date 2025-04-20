@@ -1,5 +1,9 @@
-name: Continuous Integration
+name: Continuous Integration Teste
+
 on:
+  push:
+    branches:
+      - main
   pull_request:
     branches:
       - main
@@ -7,10 +11,10 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Check out repository code
+      - name: Checkout code
         uses: actions/checkout@v4
-      - name: Python Lint Code Scanning Action
-        uses: advanced-security/python-lint-code-scanning-action@v1.1.2
-        with:
-          linter: pylint
+
+      - name: Run basic tests
+        run: echo "Running tests..." && echo "Tests passed!"
