@@ -16,5 +16,5 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Run basic tests
+      - name: Simulando CI
         run: echo "Running tests..." && echo "Tests passed!"
