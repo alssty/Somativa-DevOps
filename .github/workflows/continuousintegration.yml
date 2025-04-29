@@ -35,9 +35,9 @@ jobs:
 
       - name: Run pytest
         run: |
-              pytest test.py\
+              pytest scr.test.py\
                 --doctest-modules \
                 --junitxml=junit/test-results.xml \
-                --cov=. \
+                --cov=scr \
                 --cov-report=xml \
                 --cov-report=html
