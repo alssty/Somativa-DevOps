@@ -8,7 +8,7 @@ vencedor = {"Pedra" : "Tesoura", "Papel" : "Pedra", "Tesoura" : "Papel"}
 def escolha_computador():
     return random.choice(list(opcoes.values()))
 
-def resultado(jogador, computador):
+def decidir_resultado(jogador, computador):
     if jogador == computador:
         return "Empate"
     elif vencedor[jogador] == computador:
@@ -32,7 +32,7 @@ def main():
         print("\nSua escolha: ", escolha_jogador)
         print("Escolha do computador: ", escolha_computador)
 
-        resultado = resultado(jogador, computador)
+        resultado = decidir_resultado(jogador, computador)
         print(f"Você {resultado}!")
 
         while True:
@@ -47,3 +47,6 @@ def main():
 
             else:
                 print("\nDigite uma opção válida (sim/nao)")
+
+if __name__ == "__main__":
+    main()
