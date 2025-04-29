@@ -1,0 +1,18 @@
+name: Alertas Discord
+
+on:
+  push:
+    banches:
+      - main
+
+jobs:
+  alerta:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Enviar Alerta ao Discord
+        run: |
+          curl -X POST -H "Content-Type: application/json" \
+          -d '{"content":"Novo push feito na main."}' \
+          ${{secrets.DISCORD_WEBHOOK }}
+          
+          
