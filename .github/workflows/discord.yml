@@ -14,3 +14,5 @@ jobs:
           curl -X POST -H "Content-Type: application/json" \
           -d '{"content":"Novo push feito na main."}' \
           ${{secrets.DISCORD_WEBHOOK }}
+          
+          
