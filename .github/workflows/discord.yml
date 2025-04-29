@@ -15,4 +15,3 @@ jobs:
           -d '{"content":"Novo push feito na main."}' \
           ${{secrets.DISCORD_WEBHOOK }}
           
-          
